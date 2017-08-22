@@ -29,8 +29,14 @@ var thing = new Rect(0,0,50,50).addTo(stage).attr('fillColor', 'red');
     }
 })*/
 
-thing.animate(new KeyframeAnimation('2s', {
+/*thing.animate(new KeyframeAnimation('2s', {
     '0%': { x: 0, y: 0 },
     '50%': { x: 100, y: 100 },
     '100%': { x: 0, y: 0 }
+  }));*/
+
+  thing.animate(new KeyframeAnimation('2s', {
+    from: { x: 0, y: 0 },
+    '50%': { x: 100, y: 100 },
+    to: { x: 0, y: 0 }
   }));
