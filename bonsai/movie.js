@@ -40,3 +40,14 @@ var thing = new Rect(0,0,50,50).addTo(stage).attr('fillColor', 'red');
     '50%': { x: 100, y: 100 },
     to: { x: 0, y: 0 }
   }));
+
+  var audio = new bonsai.Audio([
+      {src: 'mission_impossible.mp3'},
+      {src: 'mission_impossible.mp3'}
+  ]);
+
+  audio.on('load', function(){
+      audio.play();
+  })
+
+  stage.addChild(audio);
