@@ -16,7 +16,7 @@ myAnimation.addSubjects([myShapeA, myShapeB]);
 myAnimation.play([myShapeA, myShapeB]);*/
 
 var thing = new Rect(0,0,50,50).addTo(stage).attr('fillColor', 'red');
-thing.attr(0, 0)
+/*thing.attr(0, 0)
 .animate('1s', {
     x: 100,
     y: 100
@@ -27,5 +27,10 @@ thing.attr(0, 0)
             y: 0
         })
     }
-})
+})*/
 
+thing.animate(new KeyframeAnimation('2s', {
+    '0%': { x: 0, y: 0 },
+    '50%': { x: 100, y: 100 },
+    '100%': { x: 0, y: 0 }
+  }));
